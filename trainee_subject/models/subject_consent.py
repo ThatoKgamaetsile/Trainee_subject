@@ -22,6 +22,7 @@ from edc_search.model_mixins import SearchSlugManager
 
 from ..subject_identifier import SubjectIdentifier
 from .model_mixins import SearchSlugModelMixin
+from ..choices import MARITAL, CURRENTLY_LIVE_WITH
 
 
 class ConsentManager(SubjectConsentManager, SearchSlugManager):
@@ -71,22 +72,6 @@ class UpdatesOrCreatesRegistrationModelMixin(
 
     class Meta:
         abstract = True
-
-
-MARITAL = (
-    ('single', 'Single'),
-    ('married', 'Married'),
-    ('divorced', 'Divorced'),
-    ('widowed', 'Widowed'),
-)
-
-CURRENTLY_LIVE_WITH = (
-    ('alone', 'Alone'),
-    ('partner_or_spouse', 'Partner or spouse'),
-    ('siblings', 'Siblings'),
-    ('other', 'Other'),
-    ('do_not_want_to_answer', 'Do not want to answer'),
-)
 
 
 class SubjectConsent(

@@ -13,19 +13,7 @@ from edc_search.model_mixins import SearchSlugModelMixin as Base
 from ..eligibility import Eligibility
 # from ..models.model_mixins import SearchSlugModelMixin
 from ..screening_identifier import ScreeningIdentifier
-
-
-MINOR_OR_GROWN = (
-    ('minor_with_guardian', 'minor with guardian'),
-    ('grown', 'Grown'),
-)
-
-ENROLLMENT_SITES = (
-    ('gaborone_private_hospital', 'Gaborone Private Hospital (GPH)'),
-    ('nyangabgwe_referral_Hospital', 'Nyangabgwe Referral Hospital (NRH)'),
-    ('princess_marina_hospital', 'Princess Marina Hospital (PMH)'),
-    ('bokamoso_private_hospital', 'Bokamoso Private Hospital (BPH)'),
-)
+# from ..choices import MINOR_OR_GROWN, ENROLLMENT_SITES
 
 
 class SearchSlugModelMixin(Base):

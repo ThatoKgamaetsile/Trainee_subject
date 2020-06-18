@@ -12,9 +12,6 @@ class CommunityEngagementQuestionnaireForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super(CommunityEngagementQuestionnaireForm, self).__init__(*args, **kwargs)
 
-    def __init__(self, *args, **kwargs):
-        super(CommunityEngagementQuestionnaireForm, self).__init__(*args, **kwargs)
-
         self.fields['major_problems'].required = False
 
 

@@ -2,45 +2,11 @@ from .list_models import Problems
 from django.db import models
 from edc_base.model_fields import OtherCharField
 from edc_constants.choices import YES_NO
-# from .model_mixins import CrfModelMixin
-
-ACTIVENESS = (
-    ('very_active', 'Very Active'),
-    ('somewhat_active', 'Somewhat Active'),
-    ('not_active_at_all', 'Not Active At All'),
-    ("dont_want_to_answer", "Don't want to answer"),
-)
-
-DID_YOU_VOTE = (
-    ('yes', 'Yes'),
-    ('no', 'No'),
-    ('not_applicable_no_election_cant_vote',
-     "Not applicable (no election, can't vote)"),
-    ('dont_want_to_answer', "Don't want to answer"),
-)
-
-NEIGHBORHOOD_PROBLEMS = (
-    ('hiv_aids', 'HIV/AIDS'),
-    ('schools', 'Schools'),
-    ('sewer', 'Sewer'),
-    ('unemployment', 'Unemployment'),
-    ('roads', 'Roads'),
-    ('water', 'Water'),
-    ('other_specify', 'Other, specify'),
-    ('house', 'House'),
-    ('malaria', 'Malaria'),
-    ('not_applicable', 'Not Applicable'),
-)
-
-ADULTS_WORK_TOGETHER = (
-    ('yes', 'Yes'),
-    ('no', 'No'),
-    ("dont_know", "Don't know"),
-    ("dont_want_to_answer", "Don't want to answer "),
-)
+from .model_mixins import CrfModelMixin
+from ..choices import ACTIVENESS, DID_YOU_VOTE, NEIGHBORHOOD_PROBLEMS, ADULTS_WORK_TOGETHER
 
 
-class CommunityEngagementQuestionnaire(models.Model):
+class CommunityEngagementQuestionnaire(CrfModelMixin):
 
     active_in_community_activities = models.CharField(
         verbose_name='How active are you in community activities? ',
@@ -77,17 +43,4 @@ class CommunityEngagementQuestionnaire(models.Model):
         choices=ADULTS_WORK_TOGETHER)
 
     def __str__(self):
-        return 'Community Engagement Questionnaire'
-
-
-
-
-
-
-
-
-
-
-
-
-
+        return f'{self.screening_identifier}'

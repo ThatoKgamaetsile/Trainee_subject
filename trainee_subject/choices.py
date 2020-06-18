@@ -1675,3 +1675,117 @@ ID_TYPE = (
     ('country_id_rcpt', 'Country ID receipt'),
     (OTHER, 'Other'),
 )
+
+MINOR_OR_GROWN = (
+    ('minor_with_guardian', 'minor with guardian'),
+    ('grown', 'Grown'),
+)
+
+ENROLLMENT_SITES = (
+    ('gaborone_private_hospital', 'Gaborone Private Hospital (GPH)'),
+    ('nyangabgwe_referral_Hospital', 'Nyangabgwe Referral Hospital (NRH)'),
+    ('princess_marina_hospital', 'Princess Marina Hospital (PMH)'),
+    ('bokamoso_private_hospital', 'Bokamoso Private Hospital (BPH)'),
+)
+
+MARITAL = (
+    ('single', 'Single'),
+    ('married', 'Married'),
+    ('divorced', 'Divorced'),
+    ('widowed', 'Widowed'),
+)
+
+CURRENTLY_LIVE_WITH = (
+    ('alone', 'Alone'),
+    ('partner_or_spouse', 'Partner or spouse'),
+    ('siblings', 'Siblings'),
+    ('other', 'Other'),
+    ('do_not_want_to_answer', 'Do not want to answer'),
+)
+
+WORK_TYPE = (
+    ('occasional_or_casual_employment_piece_job',
+     'Occasional or Casual employment (piece job)'),
+    ('seasonal_employment', 'Seasonal employment'),
+    ('foal_wage_employment_full_time', 'Foal wage employment (full-time)rm'),
+    ('formal_wage_employment_part_time', 'Formal wage employment (part-time)'),
+    ('self_employed_in_agriculture', 'Self-employed in agriculture'),
+    ('self_employed_making_money_full_time',
+     'Self-employed making money, full time'),
+    ('self_employed_making_money_part_time',
+     'Self-employed making money, part time'),
+    ("dont_want_to_answer", "Don't want to answer"),
+    ('other', 'Other'),
+)
+
+WORK_TYPE_RECENT = (
+    ('farmer_own_land', 'Farmer (own land)'),
+    ('farm_work_on_employers_land', 'Farm work on employers land'),
+    ('domestic_worker', 'Domestic worker'),
+    ('work_in_bar_hotel_guest_house_entertainment_venue',
+     'Work in bar/ hotel/ guest house/ entertainment venue'),
+    ('fishing', 'Fishing'),
+    ('mining', 'Mining'),
+    ('tourism', 'Tourism/game parks'),
+    ('working_in_shop_small_business', 'Working in shop / small business'),
+    ('informal_selling', 'Informal selling'),
+    ('commercial_sex_worker', 'Commercial sex work'),
+    ('transport_trucker_taxi_driver', 'Transport (trucker/ taxi driver)'),
+    ('factory_worker', 'Factory worker'),
+    ('guard_security_company', 'Guard (security company)'),
+    ('police_soldier', 'Police/ Soldier'),
+    ('clerical_and_office_worker', 'Clerical and office work'),
+    ('government_worker', 'Government worker'),
+    ('teacher', 'Teacher'),
+    ('health_care_worker', 'Health care worker'),
+    ('other_professional', 'Other professional'),
+    ("dont_want_to_answer", "Don't want to answer"),
+    ('other', '"Other'),
+)
+
+MONEY_EARNED = (
+    ('single', 'Single'),
+    ('married', 'Married'),
+    ('1_199_pula', '1-199 pula'),
+    ('200_499_pula', '200-499 pula'),
+    ('500_999_pula', '500-999 pula'),
+    ('1000_4999_pula', '1000-4999 pula'),
+    ('5000_10_000_pula', '5000-10,000 pula'),
+    ('more_than_10_000_pula', 'More than 10,000 pula'),
+    ('dont_want_to_answer', "Don't want to answer"),
+)
+
+ACTIVENESS = (
+    ('very_active', 'Very Active'),
+    ('somewhat_active', 'Somewhat Active'),
+    ('not_active_at_all', 'Not Active At All'),
+    ("dont_want_to_answer", "Don't want to answer"),
+)
+
+DID_YOU_VOTE = (
+    ('yes', 'Yes'),
+    ('no', 'No'),
+    ('not_applicable_no_election_cant_vote',
+     "Not applicable (no election, can't vote)"),
+    ('dont_want_to_answer', "Don't want to answer"),
+)
+
+NEIGHBORHOOD_PROBLEMS = (
+    ('hiv_aids', 'HIV/AIDS'),
+    ('schools', 'Schools'),
+    ('sewer', 'Sewer'),
+    ('unemployment', 'Unemployment'),
+    ('roads', 'Roads'),
+    ('water', 'Water'),
+    ('other_specify', 'Other, specify'),
+    ('house', 'House'),
+    ('malaria', 'Malaria'),
+    ('not_applicable', 'Not Applicable'),
+)
+
+ADULTS_WORK_TOGETHER = (
+    ('yes', 'Yes'),
+    ('no', 'No'),
+    ("dont_know", "Don't know"),
+    ("dont_want_to_answer", "Don't want to answer "),
+)

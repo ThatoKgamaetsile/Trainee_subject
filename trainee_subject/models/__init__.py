@@ -9,4 +9,4 @@ from .subject_visit import SubjectVisit
 from .signals import subject_screening_on_post_save
 from .subject_locator import SubjectLocator
 from .subject_requisition import SubjectRequisition
-from .af005 import Af005
+from .death_report import DeathReport

@@ -5,7 +5,7 @@ from .model_mixins import CrfModelMixin
 from ..choices import DEATH_CAUSE_CATEGORY_CHOICE, PRIMARY_DEATH_CAUSE_CHOICE
 
 
-class Af005 (CrfModelMixin):
+class DeathReport(CrfModelMixin):
 
     death_date = models.DateTimeField(
         verbose_name='Date of Death:',
@@ -44,4 +44,4 @@ class Af005 (CrfModelMixin):
 
     class Meta(CrfModelMixin.Meta):
         app_label = 'trainee_subject'
-        verbose_name = 'AF005 Death Record'
+        verbose_name = 'Death Report Record'

@@ -53,6 +53,9 @@ INSTALLED_APPS = [
     'edc_device.apps.AppConfig',
     'edc_consent.apps.AppConfig',
     'edc_visit_schedule.apps.AppConfig',
+    'edc_action_item.apps.AppConfig',
+    'edc_locator.apps.AppConfig',
+    'edc_registration.apps.AppConfig',
     'trainee_subject.apps.AppConfig',
     'trainee_subject.apps.EdcAppointmentAppConfig',
     'trainee_subject.apps.EdcTimepointAppConfig',
@@ -62,8 +65,6 @@ INSTALLED_APPS = [
     'trainee_subject.apps.EdcProtocolAppConfig',
     'trainee_subject.apps.EdcVisitTrackingAppConfig',
     'trainee_subject.apps.EdcLabAppConfig',
-    'edc_action_item.apps.AppConfig',
-    'edc_locator.apps.AppConfig',
 ]
 
 

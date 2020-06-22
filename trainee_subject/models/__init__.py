@@ -2,8 +2,8 @@ from .subject_screening import SubjectScreening
 from .subject_consent import SubjectConsent
 from .onschedule import OnSchedule
 from .education_questionnaire import EducationQuestionnaire
-from .community_engagement_questionnaire import \
-    CommunityEngagementQuestionnaire
+from .community_questionnaire import \
+    CommunityQuestionnaire
 from .appointment import Appointment
 from .subject_visit import SubjectVisit
 from .signals import subject_screening_on_post_save

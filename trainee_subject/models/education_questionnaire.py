@@ -6,12 +6,12 @@ from ..choices import WORK_TYPE, WORK_TYPE_RECENT, MONEY_EARNED
 
 class EducationQuestionnaire(CrfModelMixin):
 
-    currently_working = models.CharField(
+    work_status = models.CharField(
         verbose_name='Are you currently working ',
         max_length=10,
         choices=YES_NO)
 
-    what_type_of_work = models.CharField(
+    work_type = models.CharField(
         verbose_name='In your main job what type of work do you do? ',
         max_length=50,
         choices=WORK_TYPE)
@@ -23,7 +23,7 @@ class EducationQuestionnaire(CrfModelMixin):
         max_length=50,
         choices=WORK_TYPE)
 
-    money_you_earned = models.CharField(
+    previous_earning = models.CharField(
         verbose_name='In the past month, how much money did you '
                      'earn from work you did or received in payment? ',
         max_length=50,

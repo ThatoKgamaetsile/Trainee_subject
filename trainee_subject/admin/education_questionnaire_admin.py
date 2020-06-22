@@ -11,10 +11,10 @@ class EducationQuestionnaireAdmin(admin.ModelAdmin):
     form = EducationQuestionnaireForm
 
     radio_fields = {
-        "currently_working": admin.VERTICAL,
-        "what_type_of_work": admin.VERTICAL,
+        "work_status": admin.VERTICAL,
+        "work_type": admin.VERTICAL,
         "recent_job": admin.VERTICAL,
-        "money_you_earned": admin.VERTICAL,
+        "previous_earning": admin.VERTICAL,
     }
 
 

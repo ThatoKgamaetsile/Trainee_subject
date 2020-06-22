@@ -166,13 +166,3 @@ class SubjectConsent(
         unique_together = (('subject_identifier', 'version'),
                            ('first_name', 'dob', 'initials', 'version'))
         ordering = ('-created',)
-
-
-
-
-
-
-
-
-
-

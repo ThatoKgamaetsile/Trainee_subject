@@ -89,12 +89,3 @@ class SubjectLocatorAdmin(ModelAdminMixin, admin.ModelAdmin):
 
     search_fields = ('subject_identifier', )
 
-
-
-
-
-
-
-
-
-

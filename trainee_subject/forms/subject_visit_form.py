@@ -52,19 +52,3 @@ class SubjectVisitForm (
     class Meta:
         model = SubjectVisit
         fields = '__all__'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

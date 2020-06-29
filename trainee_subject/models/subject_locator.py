@@ -121,12 +121,3 @@ class SubjectLocator(LocatorModelMixin, RequiresConsentFieldsModelMixin,
 
     class Meta:
         verbose_name = 'Subject Locator'
-
-
-
-
-
-
-
-
-

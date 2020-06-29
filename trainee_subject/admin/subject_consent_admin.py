@@ -131,11 +131,3 @@ class SubjectConsentAdmin(ModelAdminConsentMixin, ModelAdminMixin, SimpleHistory
                 subject_identifier=obj.subject_identifier)
         extra_context.update({'protected': protected})
         return super().delete_view(request, object_id, extra_context)
-
-
-
-
-
-
-
-

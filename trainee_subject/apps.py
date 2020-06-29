@@ -21,8 +21,7 @@ from edc_visit_tracking.constants import MISSED_VISIT
 from edc_visit_tracking.constants import SCHEDULED, UNSCHEDULED, LOST_VISIT
 
 
-# from edc_sync_files.apps import AppConfig as BaseEdcSyncFilesAppConfig
-# from edc_sync.apps import AppConfig as BaseEdcSyncAppConfig
+
 class AppConfig(DjangoApponfig):
     name = 'trainee_subject'
     verbose_name = 'Trainee Subject CRFs'
@@ -42,9 +41,9 @@ if settings.APP_NAME == 'trainee_subject':
         protocol_name = 'Trainee'
         protocol_title = ''
         study_open_datetime = datetime(
-            2010, 5, 2, 0, 0, 0, tzinfo=gettz('UTC'))
+            2020, 5, 2, 0, 0, 0, tzinfo=gettz('UTC'))
         study_close_datetime = datetime(
-            2019, 12, 31, 23, 59, 59, tzinfo=gettz('UTC'))
+            2025, 12, 31, 23, 59, 59, tzinfo=gettz('UTC'))
 
     class EdcLabAppConfig(BaseEdcLabAppConfig):
         base_template_name = 'trainee/base.html'

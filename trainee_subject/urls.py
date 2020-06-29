@@ -3,7 +3,7 @@ from django.views.generic.base import RedirectView
 
 from .admin_site import trainee_subject_admin
 
-app_name = 'cancer_subject'
+app_name = 'trainee_subject'
 
 urlpatterns = [
     path('admin/', trainee_subject_admin.urls),

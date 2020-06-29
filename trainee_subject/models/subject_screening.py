@@ -100,8 +100,8 @@ class SubjectScreening(
 
     class Meta:
         app_label = 'trainee_subject'
-#        verbose_name = "Trainee Eligibility"
-#        verbose_name_plural = "Trainee Eligibility"
+        verbose_name = "Trainee Eligibility"
+        verbose_name_plural = "Trainee Eligibility"
 
     def save(self, *args, **kwargs):
         eligibility_obj = self.eligibility_cls(

@@ -1,3 +1,7 @@
 /trainee_subject/migrations/
 /.idea/
 /.DS_Store
+.project
+.pydevproject
+.settings/
+__pycache__

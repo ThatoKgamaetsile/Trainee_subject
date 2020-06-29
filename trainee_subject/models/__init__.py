@@ -10,3 +10,4 @@ from .signals import subject_screening_on_post_save
 from .subject_locator import SubjectLocator
 from .subject_requisition import SubjectRequisition
 from .death_report import DeathReport
+from .identifier_history import IdentifierHistory

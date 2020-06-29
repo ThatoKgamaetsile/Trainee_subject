@@ -7,7 +7,7 @@ from .subject_consent import SubjectConsent
 from .subject_screening import SubjectScreening
 
 
-@receiver(post_save, weak=False, sender=SubjectConsent,
+@receiver(post_save, weak=False, sender=SubjectScreening,
           dispatch_uid='subject_screening_on_post_save')
 def subject_screening_on_post_save(sender, instance, raw, created, **kwargs):
     """Creates an onschedule instance for this enrolled subject, if
@@ -32,13 +32,12 @@ def subject_screening_on_post_save(sender, instance, raw, created, **kwargs):
 
                 # Update subject consent with screening identifier
                 try:
-                    subject_screening = SubjectScreening.objects.get(
-                        screening_identifier=instance.screening_identifier)
-
-                except SubjectScreening.DoesNotExist:
+                    subject_consent = SubjectConsent.objects.get(
+                        subject_identifier=instance.subject_identifier)
+                except SubjectConsent.DoesNotExist:
                     raise ValidationError(
-                        'Subject Screening for subject '
+                        'Subject Consent for subject '
                         f'{instance.subject_identifier} must exist.')
-
-                    # subject_screening = SubjectScreening.objects.get(
-                    # screening_identifier=instance.screening_identifier)
+                else:
+                    subject_consent.screening_identifier = instance.screening_identifier
+                    subject_consent.save()

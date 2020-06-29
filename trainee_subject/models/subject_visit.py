@@ -55,4 +55,3 @@ class SubjectVisit(
 
     class Meta(VisitModelMixin.Meta):
         pass
-

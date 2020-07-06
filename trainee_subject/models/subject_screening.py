@@ -36,8 +36,7 @@ class SubjectScreening(
     screening_identifier = models.CharField(
         verbose_name="Eligibility Identifier",
         max_length=36,
-        unique=True,
-        editable=False)
+        unique=True)
 
     report_datetime = models.DateTimeField(
         verbose_name='Report Date and Time',

@@ -39,6 +39,7 @@ class SubjectScreeningAdmin(admin.ModelAdmin):
         (None, {
             'fields': (
                 'report_datetime',
+                'screening_identifier',
                 'gender',
                 'citizen_or_not',
                 'married_to_motswana',
@@ -52,7 +53,7 @@ class SubjectScreeningAdmin(admin.ModelAdmin):
                            'to the interviewer.'}),
         audit_fieldset_tuple)
 
-    search_fields = ('screening_identifier',)
+    search_fields = ('subject_identifier',)
 
     radio_fields = {
         "gender": admin.VERTICAL,

@@ -21,7 +21,6 @@ from edc_visit_tracking.constants import MISSED_VISIT
 from edc_visit_tracking.constants import SCHEDULED, UNSCHEDULED, LOST_VISIT
 
 
-
 class AppConfig(DjangoApponfig):
     name = 'trainee_subject'
     verbose_name = 'Trainee Subject CRFs'

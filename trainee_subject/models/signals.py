@@ -7,7 +7,7 @@ from .subject_consent import SubjectConsent
 from .subject_screening import SubjectScreening
 
 
-@receiver(post_save, weak=False, sender=SubjectScreening,
+@receiver(post_save, weak=False, sender=SubjectConsent,
           dispatch_uid='subject_screening_on_post_save')
 def subject_screening_on_post_save(sender, instance, raw, created, **kwargs):
     """Creates an onschedule instance for this enrolled subject, if

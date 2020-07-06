@@ -11,6 +11,7 @@ class SubjectModelFormMixin(forms.ModelForm):
 class SubjectScreeningForm(SubjectModelFormMixin):
 
     screening_identifier = forms.CharField(
+        required=False,
         label='Screening Identifier',
         widget=forms.TextInput(attrs={'readonly': 'readonly'}))
 

@@ -2,7 +2,7 @@ from django.db import models
 from edc_base.model_managers import HistoricalRecords
 from edc_base.model_mixins import BaseUuidModel
 from edc_constants.choices import YES_NO, GENDER
-# from edc_identifier.model_mixins import NonUniqueSubjectIdentifierFieldMixin
+from edc_identifier.model_mixins import NonUniqueSubjectIdentifierFieldMixin
 from edc_base.utils import get_utcnow
 from edc_base.model_validators import eligible_if_yes
 from edc_base.sites.site_model_mixin import SiteModelMixin
@@ -27,7 +27,7 @@ class SearchSlugModelMixin(Base):
 
 
 class SubjectScreening(
-        SiteModelMixin,
+        SiteModelMixin, NonUniqueSubjectIdentifierFieldMixin,
         SearchSlugModelMixin, BaseUuidModel):
 
     eligibility_cls = Eligibility
@@ -94,7 +94,7 @@ class SubjectScreening(
         editable=False)
 
     def __str__(self):
-        return f'{self.screening_identifier}'
+        return f'{self.screening_identifier}, {self.subject_identifier}'
 
     history = HistoricalRecords()
 
